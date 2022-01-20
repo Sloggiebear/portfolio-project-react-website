@@ -13,14 +13,18 @@ function App() {
   return (
     <BrowserRouter>
       <Nav />
-      <div>
-        <Routes>
-          <Route path={"/"} element={<Homepage />} exact />
-          <Route path={"/about"} element={<About />} />
-          <Route path={"/articles-list"} element={<ArticlesListPage />} />
-          <Route path={"/article/:slug"} element={<Article />} />
-          <Route path={"*"} element={<PageNotFound />} />
-        </Routes>
+      <div className="container">
+          <div className="row">
+              <div className="col">
+                <Routes>
+                  <Route path={"/"} element={<Homepage />} exact />
+                  <Route path={"/about"} element={<About />} />
+                  <Route path={"/articles-list"} element={<ArticlesListPage />} />
+                  <Route path={"/article/:slug"} element={<Article />} />
+                  <Route path={"*"} element={<PageNotFound />} />
+                </Routes>
+              </div>
+          </div>
       </div>
     </BrowserRouter>
   );
